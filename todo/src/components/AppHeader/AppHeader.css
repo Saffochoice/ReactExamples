@@ -1,0 +1,17 @@
+.app-header {
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.app-header h1{
+  line-height: 100%;
+  margin-right: 30px;
+}
+.app-header h1, .app-header h2{
+  margin-bottom: 0;
+}
+.app-header h2{
+  text-align: right;
+  color: #999;
+  font-size: 1.2rem;
+}
