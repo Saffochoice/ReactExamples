@@ -1,0 +1,17 @@
+.create-panel {
+  margin-top: 20px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.create-panel input{
+
+  width: 100%;
+}
+.create-panel .btn{
+  width: 40px;
+  margin-left: 10px;
+}

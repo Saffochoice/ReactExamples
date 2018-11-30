@@ -5,33 +5,9 @@ import './TodoListItem.css'
 
 export default class TodoListItem extends Component {
 
-  constructor() {
-    super();
-
-    this.state = {
-      done: false,
-      important: false
-    }
-  }
-
-  onLabelClick = () => {
-    this.setState(({done}) => {
-      return {
-        done: !done
-      }
-    });
-  }
-  setImportant = () => {
-    this.setState((state) => {
-      return {
-        important: !this.state.important
-      }
-    });
-  }
-
   render() {
-    const { label } = this.props; // деструктуризация
-    const { done, important } = this.state;
+    const { label, onDelete, toggleDone, toggleImportant, important, done } = this.props; // деструктуризация
+
 
     let classNames = 'todo-list-item list-group-item';
     done ? classNames += ' done' : classNames += '';
@@ -40,14 +16,15 @@ export default class TodoListItem extends Component {
 
     return (
       <li className={classNames}>
-        <span onClick={this.onLabelClick}>{ label }</span>
+        <span onClick={toggleDone}>{ label }</span>
         <div className='buttons'>
           <button type='button'
             className='btn btn-outline-success'
-            onClick={this.setImportant}><i
+            onClick={toggleImportant}><i
             className='fa fa-exclamation'></i></button>
           <button type='button'
-            className='btn btn-outline-danger'><i
+            className='btn btn-outline-danger'
+            onClick={onDelete}><i
             className='fa fa-trash'></i></button>
         </div>
 
