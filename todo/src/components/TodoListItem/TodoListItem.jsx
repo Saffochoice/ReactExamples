@@ -5,24 +5,53 @@ import './TodoListItem.css'
 
 export default class TodoListItem extends Component {
 
+  constructor() {
+    super();
+
+    this.state = {
+      done: false,
+      important: false
+    }
+  }
+
+  onLabelClick = () => {
+    this.setState(({done}) => {
+      return {
+        done: !done
+      }
+    });
+  }
+  setImportant = () => {
+    this.setState((state) => {
+      return {
+        important: !this.state.important
+      }
+    });
+  }
 
   render() {
-    const { label, important = false } = this.props; // деструктуризация
+    const { label } = this.props; // деструктуризация
+    const { done, important } = this.state;
 
-    const impClass = {
-      fontWeight: '800',
-      color: 'tomato',
-      fontSize: '20px'
-    };
+    let classNames = 'todo-list-item list-group-item';
+    done ? classNames += ' done' : classNames += '';
+    important ? classNames += ' important' : classNames += '';
+
+
     return (
-      <div className={important ? 'todo-list-item important' : 'todo-list-item'}>
-        <span>{ label }</span>
+      <li className={classNames}>
+        <span onClick={this.onLabelClick}>{ label }</span>
         <div className='buttons'>
-          <button type='button' className='btn btn-outline-success'><i className='fa fa-exclamation'></i></button>
-          <button type='button' className='btn btn-outline-danger'><i className='fa fa-trash'></i></button>
+          <button type='button'
+            className='btn btn-outline-success'
+            onClick={this.setImportant}><i
+            className='fa fa-exclamation'></i></button>
+          <button type='button'
+            className='btn btn-outline-danger'><i
+            className='fa fa-trash'></i></button>
         </div>
 
-      </div>
+      </li>
     );
   }
 }

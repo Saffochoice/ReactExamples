@@ -4,9 +4,16 @@
   -ms-align-items: center;
   align-items: center;
   justify-content: space-between;
+
+}
+.todo-list-item span {
+  cursor: pointer;
 }
 .todo-list-item.done {
   text-decoration: line-through;
+  background-color: #eee;
+  opacity: 0.8;
+  color: #999;
 }
 .todo-list-item.important {
   font-weight: bold;
