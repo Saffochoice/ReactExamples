@@ -20,6 +20,11 @@
   color: tomato;
   font-size: 1.2rem;
 }
+.todo-list-item.important .btn-outline-warning{
+  background-color: #ffc107;
+  color: black;
+
+}
 .todo-list-item .btn{
   width: 40px;
   margin-left: 10px;

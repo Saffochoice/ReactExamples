@@ -91,11 +91,11 @@ export default class App extends Component {
 
   btnFilter = (arr, filterStr) => {
     let newArr = [];
-    if(filterStr == 'active'){
+    if(filterStr === 'active'){
       newArr = arr.filter((el) => !el.done)
-    } else if(filterStr == 'done'){
+    } else if(filterStr === 'done'){
       newArr = arr.filter((el) => el.done)
-    } else if(filterStr == 'important'){
+    } else if(filterStr === 'important'){
       newArr = arr.filter((el) => el.important)
     } else {
       newArr = arr
@@ -130,6 +130,7 @@ export default class App extends Component {
 
     return (
       <div className='app'>
+
         <AppHeader toDo={toDo} done={done} importants={importants}/>
         <FilterPanel
           setFilterState={this.setFilterState}

@@ -19,7 +19,7 @@ export default class TodoListItem extends Component {
         <span onClick={toggleDone}>{ label }</span>
         <div className='buttons'>
           <button type='button'
-            className='btn btn-outline-success'
+            className='btn btn-outline-warning'
             onClick={toggleImportant}><i
             className='fa fa-exclamation'></i></button>
           <button type='button'
