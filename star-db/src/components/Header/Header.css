@@ -1,0 +1,35 @@
+.header {
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  //box-shadow: 0px -1px 15px 0px rgba(207,207,207,1);
+  padding: 0 30px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #fff;
+  //background-color: #efefef;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  //color: #17a2b8;
+}
+.header__logo i{
+  font-size: 40px;
+}
+.header__logo span{
+  font-size: 25px;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 2px;
+  margin-left: 15px;
+}
+.header__nav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.header__nav .btn {
+  margin-left: 20px;
+  font-size: 13px;
+}

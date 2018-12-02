@@ -1,0 +1,18 @@
+.app__content-area {
+  display: flex;
+  //padding: 30px;
+  border: 1px solid #eee;
+  margin-top: 10px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+.app__content-area .item-list{
+  flex: 1;
+}
+.app__content-area .person-details{
+  flex: 3;
+  margin-left: 10px;
+}
+body {
+  background-color: #efefef;
+}
