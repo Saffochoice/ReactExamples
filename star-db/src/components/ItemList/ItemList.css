@@ -1,4 +1,10 @@
 .item-list .list-group-item{
   cursor: pointer;
   border-color: #eee;
+  transition: 0.3s;
+}
+.item-list .list-group-item:hover{
+  background-color: #343a40;
+  color: white;
+  transform: scale(1.04);
 }
